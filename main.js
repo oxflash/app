@@ -86,3 +86,7 @@ window.onload = function() {
 
 // Event listener for purchase button on purchase page
 document.getElementById("purchase-btn")?.addEventListener("click", generateInvoice);
+// Go back to the previous page
+function goBack() {
+    window.history.back();
+}
