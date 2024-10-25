@@ -1,4 +1,7 @@
 /* ========== INDEX PAGE STYLING (Authentication Page) ========== */
+.index-page{
+    background-color: #ffffff;
+}
 .index-page .container  {
     text-align: center;
     margin-top: 100px;
