@@ -31,6 +31,8 @@ document.getElementById("authForm")?.addEventListener("submit", function(event) 
 
 // Function to generate an invoice for purchase page
 async function generateInvoice() {
+    document.getElementsByClassName('purchase-page');
+    const erroh = document.getElementById('err')
     showLoading();  // Show loading animation
 
     try {
@@ -60,12 +62,13 @@ async function generateInvoice() {
             window.location.href = data.invoice_url;  // Redirect user to NOWPayments invoice page
         } else {
             hideLoading();  // Stop loading spinner
-            alert('Failed to generate invoice. Please try again.');
+            //alert('Failed to generate invoice. Please try again.');
         }
     } catch (error) {
         hideLoading();  // Ensure loading stops in case of error
         console.error('Error generating invoice:', error);
-        alert('Error generating invoice. Please try again.');
+        erroh.innerText = 'Cannot'
+        //alert('Error generating invoice. Please try again.');
     }
 }
 
