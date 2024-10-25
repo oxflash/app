@@ -62,12 +62,19 @@ async function generateInvoice() {
             window.location.href = data.invoice_url;  // Redirect user to NOWPayments invoice page
         } else {
             hideLoading();  // Stop loading spinner
+            erroh.innerText = 'Unable to access payment page, Try Again'
+            setTimeout(() => {
+                erroh.innerText = " ";
+            }, 5000);  // 5000 milliseconds = 5 seconds
             //alert('Failed to generate invoice. Please try again.');
         }
     } catch (error) {
         hideLoading();  // Ensure loading stops in case of error
         console.error('Error generating invoice:', error);
-        erroh.innerText = 'Cannot'
+        erroh.innerText = 'Unable to access payment page, Try Again'
+        setTimeout(() => {
+            erroh.innerText = " ";
+        }, 5000);  // 5000 milliseconds = 5 seconds
         //alert('Error generating invoice. Please try again.');
     }
 }

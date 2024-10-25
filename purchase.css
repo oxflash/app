@@ -43,7 +43,7 @@
 }
 
 .purchase-page button:hover {
-    background-color: darkorange;
+    background-color: rgb(231, 168, 91);
 }
 
 .container button{
@@ -136,4 +136,8 @@
     font-size: 16px;
     color: #000000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.199);
+}
+p#err{
+    color: red;
+    text-align: center;
 }
