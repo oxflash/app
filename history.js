@@ -57,3 +57,8 @@ async function fetchRecentTransactions() {
         historyList.innerHTML = '<p>Error loading transaction history. Please try again later.</p>';
     }
 }
+// Go back to the previous page
+function goBack() {
+    window.history.back();
+}
+
