@@ -1,6 +1,7 @@
 /* Make the container full screen and center its content */
 .history-page{
     background-color: #f9f9f9;
+    
     }   
     .full-screen {
         height: 100%; /* 100% of the viewport height */

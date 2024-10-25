@@ -146,3 +146,41 @@
         color: red;
         text-align: center;
     }
+    .backbtn button{
+        text-align: left;
+        align-items: center;
+        appearance: none;
+        background-color: #ffffff;
+        border-radius: 10px;
+        border-style: none;
+        box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+        box-sizing: inherit;
+        color: #000000;
+        cursor: pointer;
+        display: flex;
+        fill: currentcolor;
+        font-family: "Google Sans",Roboto,Arial,sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        height: 35px;
+        justify-content: center;
+        line-height: normal;
+        max-width: 100%;
+        overflow: visible;
+        padding: 2px 24px;
+        position: relative;
+        text-align: center;
+        text-transform: none;
+        transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: auto;
+        will-change: transform,opacity;
+        z-index: 0;
+        margin: 0 5px;
+    }
+    .backbtn img{
+        width: 20px;
+        height: 20px;
+    }
