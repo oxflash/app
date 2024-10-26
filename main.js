@@ -93,10 +93,8 @@ function goBack() {
 
 function openSupportEmail() {
     const email = "your-email@example.com";
-    const mailtoLink = `mailto:${email}`;
-
-    // Attempt to open in a new tab for compatibility
-    window.open(mailtoLink, '_blank');
+    const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}`;
+    window.open(gmailLink, '_blank');
 }
 
 document.getElementById("support-btn").addEventListener("click", openSupportEmail);
