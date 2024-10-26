@@ -115,3 +115,10 @@ function showSuccessDialog() {
     // Call the function to fetch BTC price on page load
     fetchBitcoinPriceAndUpdate();
 });
+
+function openSupportEmail() {
+    const email = "your-email@example.com";
+    window.open(`mailto:${email}`, '_system');
+}
+
+document.getElementById("support-btn").addEventListener("click", openSupportEmail);
