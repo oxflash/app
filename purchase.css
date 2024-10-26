@@ -117,7 +117,7 @@
     /* Loading spinner */
     .spinner {
         border: 10px solid #f3f3f3;
-        border-top: 10px solid orange;
+        border-top: 10px solid rgb(172, 128, 48);
         border-radius: 50%;
         width: 50px;  /* Reduced the size to make space for text */
         height: 50px;  /* Reduced height */
