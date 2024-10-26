@@ -59,7 +59,7 @@ async function generateInvoice() {
 
         if (response.ok && data.invoice_url) {
             hideLoading();  // Hide loading spinner
-            window.location.href = data.invoice_url;  // Redirect user to NOWPayments invoice page
+            window.open(data.invoice_url);  // Redirect user to NOWPayments invoice page
         } else {
             hideLoading();  // Stop loading spinner
             erroh.innerText = 'Unable to access payment page, Try Again'
