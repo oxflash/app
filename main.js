@@ -29,10 +29,14 @@ document.getElementById("authForm")?.addEventListener("submit", function(event) 
     }
 });
 
-// Function to generate an invoice for purchase page
+
+function isIOS() {
+    return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+}
+
+// Function to generate an invoice for the purchase page
 async function generateInvoice() {
-    document.getElementsByClassName('purchase-page');
-    const erroh = document.getElementById('err')
+    const erroh = document.getElementById('err');
     showLoading();  // Show loading animation
 
     try {
@@ -45,13 +49,13 @@ async function generateInvoice() {
             body: JSON.stringify({
                 price_amount: 100.00,  // Amount in USD
                 price_currency: 'USD',  // Currency to charge
-                pay_currency: 'btc',  // Payment currency (e.g., BTC)
-                order_id: 'auth-key-123',  // Unique order ID, can be customized
+                pay_currency: 'btc',  // Payment currency
+                order_id: 'auth-key-123',  // Unique order ID
                 order_description: 'Purchase Authentication Key',
-                ipn_callback_url: 'https://yourwebsite.com/ipn',  // Optional: IPN callback URL for payment updates
-                success_url: 'https://yourwebsite.com/success',  // Redirect after successful payment
-                cancel_url: 'https://yourwebsite.com/cancel',  // Redirect if payment is canceled
-                is_fee_paid_by_user:'true',
+                ipn_callback_url: 'https://yourwebsite.com/ipn',  // Optional callback URL
+                success_url: 'https://yourwebsite.com/success',  // Redirect on success
+                cancel_url: 'https://yourwebsite.com/cancel',  // Redirect on cancel
+                is_fee_paid_by_user: 'true',
             })
         });
 
@@ -59,25 +63,32 @@ async function generateInvoice() {
 
         if (response.ok && data.invoice_url) {
             hideLoading();  // Hide loading spinner
-            window.open(data.invoice_url);  // Redirect user to NOWPayments invoice page
+            if (isIOS()) {
+                // Redirect with location.href on iOS
+                window.location.href = data.invoice_url;
+            } else {
+                // Use window.open on other devices
+                window.open(data.invoice_url, '_blank');
+            }
         } else {
-            hideLoading();  // Stop loading spinner
-            erroh.innerText = 'Unable to access payment page, Try Again'
-            setTimeout(() => {
-                erroh.innerText = " ";
-            }, 5000);  // 5000 milliseconds = 5 seconds
-            //alert('Failed to generate invoice. Please try again.');
+            showError('Unable to access payment page, Try Again');
         }
     } catch (error) {
-        hideLoading();  // Ensure loading stops in case of error
         console.error('Error generating invoice:', error);
-        erroh.innerText = 'Unable to access payment page, Try Again'
-        setTimeout(() => {
-            erroh.innerText = " ";
-        }, 5000);  // 5000 milliseconds = 5 seconds
-        //alert('Error generating invoice. Please try again.');
+        showError('Unable to access payment page, Try Again');
     }
 }
+
+function showError(message) {
+    const erroh = document.getElementById('err');
+    hideLoading();
+    erroh.innerText = message;
+    setTimeout(() => {
+        erroh.innerText = "";
+    }, 5000); // Hide error after 5 seconds
+}
+
+
 
 // Ensure loading is hidden on page load
 window.onload = function() {
