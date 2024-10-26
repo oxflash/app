@@ -93,7 +93,10 @@ function goBack() {
 
 function openSupportEmail() {
     const email = "your-email@example.com";
-    window.open(`mailto:${email}`, '_system');
+    const mailtoLink = `mailto:${email}`;
+
+    // Attempt to open in a new tab for compatibility
+    window.open(mailtoLink, '_blank');
 }
 
 document.getElementById("support-btn").addEventListener("click", openSupportEmail);
