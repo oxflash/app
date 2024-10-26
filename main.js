@@ -91,10 +91,8 @@ function goBack() {
     window.history.back();
 }
 
-function openSupportEmail() {
-    const email = "your-email@example.com";
-    const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}`;
-    window.open(gmailLink, '_blank');
+function copyEmail() {
+    navigator.clipboard.writeText("your-email@example.com")
+    .then(() => alert("Email copied to clipboard!"))
+    .catch(err => console.error("Failed to copy email: ", err));
 }
-
-document.getElementById("support-btn").addEventListener("click", openSupportEmail);
