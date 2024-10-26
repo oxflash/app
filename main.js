@@ -92,7 +92,18 @@ function goBack() {
 }
 
 function copyEmail() {
+    const msg = document.getElementById('clipmsg');
+    
     navigator.clipboard.writeText("your-email@example.com")
-    .then(() => alert("Email copied to clipboard!"))
-    .catch(err => console.error("Failed to copy email: ", err));
+        .then(() => {
+            msg.innerText = 'Email copied to clipboard!';
+        })
+        .catch(() => {
+            msg.innerText = 'Unable to copy email, please try again.';
+        });
+
+    // Clear the message after 5 seconds
+    setTimeout(() => {
+        msg.innerText = "";
+    }, 5000);
 }
