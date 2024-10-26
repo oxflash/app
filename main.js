@@ -90,19 +90,3 @@ document.getElementById("purchase-btn")?.addEventListener("click", generateInvoi
 function goBack() {
     window.history.back();
 }
-
-// Function to open the default email client with pre-filled email details
-function openSupportEmail() {
-    const email = "your-email@example.com";
-    const subject = "Support Request";
-    const body = "Hello Support Team,";
-
-    // Construct the mailto link with subject and body
-    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-    // Set the mailto link as the location to open the email client
-    window.location.href = mailtoLink;
-}
-
-// Bind the function to the support button
-document.getElementById("support-btn").addEventListener("click", openSupportEmail);
