@@ -17,8 +17,8 @@
     }
 
     .purchase-page h2 {
-        color: #b38a54;
-        font-family: Arial, sans-serif;
+        color: #6e4a1a;
+        font-family: Georgia, 'Times New Roman', Times, serif;
         font-size: 24px;
         margin-bottom: 20px;
     }
@@ -65,7 +65,7 @@
         fill: currentcolor;
         font-family: "Google Sans",Roboto,Arial,sans-serif;
         font-size: 14px;
-        font-weight: 500;
+        font-weight: bold;
         height: 48px;
         justify-content: center;
         letter-spacing: .25px;
@@ -183,4 +183,14 @@
     .backbtn img{
         width: 20px;
         height: 20px;
+    }
+    p#moreinfo{
+        font-weight: bold;
+        color: #b38a54;
+    }
+    p#amount{
+        font-size: 25px;
+        font-weight: bold;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        color: #b38a54;
     }
