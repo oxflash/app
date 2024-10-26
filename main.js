@@ -90,3 +90,10 @@ document.getElementById("purchase-btn")?.addEventListener("click", generateInvoi
 function goBack() {
     window.history.back();
 }
+
+function openSupportEmail() {
+    const email = "your-email@example.com";
+    window.open(`mailto:${email}`, '_system');
+}
+
+document.getElementById("support-btn").addEventListener("click", openSupportEmail);
