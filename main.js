@@ -34,27 +34,26 @@ function isIOS() {
     return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 }
 
-// Function to generate an invoice for the purchase page
 async function generateInvoice() {
     const erroh = document.getElementById('err');
-    showLoading();  // Show loading animation
+    showLoading();
 
     try {
         const response = await fetch('https://api.nowpayments.io/v1/invoice', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'x-api-key': 'SYZVG7V-WKXM69C-NZH8H2Q-6SBVA5H',  // Replace with your NOWPayments API Key
+                'x-api-key': 'SYZVG7V-WKXM69C-NZH8H2Q-6SBVA5H',
             },
             body: JSON.stringify({
-                price_amount: 100.00,  // Amount in USD
-                price_currency: 'USD',  // Currency to charge
-                pay_currency: 'btc',  // Payment currency
-                order_id: 'auth-key-123',  // Unique order ID
+                price_amount: 100.00,
+                price_currency: 'USD',
+                pay_currency: 'btc',
+                order_id: 'auth-key-123',
                 order_description: 'Purchase Authentication Key',
-                ipn_callback_url: 'https://yourwebsite.com/ipn',  // Optional callback URL
-                success_url: 'https://yourwebsite.com/success',  // Redirect on success
-                cancel_url: 'https://yourwebsite.com/cancel',  // Redirect on cancel
+                ipn_callback_url: 'https://yourwebsite.com/ipn',
+                success_url: 'https://yourwebsite.com/success',
+                cancel_url: 'https://yourwebsite.com/cancel',
                 is_fee_paid_by_user: 'true',
             })
         });
@@ -62,12 +61,16 @@ async function generateInvoice() {
         const data = await response.json();
 
         if (response.ok && data.invoice_url) {
-            hideLoading();  // Hide loading spinner
+            hideLoading();
             if (isIOS()) {
-                // Redirect with location.href on iOS
-                window.location.href = data.invoice_url;
+                // Try to open the URL directly
+                const opened = window.open(data.invoice_url, '_blank');
+                if (!opened) {
+                    // Fallback: Show prompt to copy link if blocked
+                    promptUserToCopyLink(data.invoice_url);
+                }
             } else {
-                // Use window.open on other devices
+                // For other devices, open in a new tab
                 window.open(data.invoice_url, '_blank');
             }
         } else {
@@ -79,14 +82,24 @@ async function generateInvoice() {
     }
 }
 
+// Fallback function to prompt the user to copy the link manually
+function promptUserToCopyLink(url) {
+    const erroh = document.getElementById('err');
+    erroh.innerHTML = `Unable to open the payment page. Please <a href="${url}" target="_blank">click here</a> or copy this link: ${url}`;
+    setTimeout(() => {
+        erroh.innerText = "";
+    }, 10000); // Show the link for 10 seconds
+}
+
 function showError(message) {
     const erroh = document.getElementById('err');
     hideLoading();
     erroh.innerText = message;
     setTimeout(() => {
         erroh.innerText = "";
-    }, 5000); // Hide error after 5 seconds
+    }, 5000);
 }
+
 
 
 
