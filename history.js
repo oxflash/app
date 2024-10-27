@@ -45,7 +45,7 @@ async function fetchRecentTransactions() {
             transactionElement.innerHTML = `
                 <p class="transaction-id">Transaction ID: <br>${tx.hash}</p>
                 <p class="transaction-amount">Amount: ${btcAmount.toFixed(8)} BTC</p>
-                <p class="transaction-usd">$${usdEquivalent} USD</p>
+                <p class="transaction-usd">${usdEquivalent} USD</p>
                 <p class="transaction-date">Date: ${transactionTime.toLocaleString()}</p>
             `;
 
