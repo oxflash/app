@@ -1,3 +1,6 @@
+.page{
+    background-color: #f9f9f9;
+}
 .container{
     text-align:left;
     justify-content: center;
@@ -60,3 +63,4 @@
     p#lastline{
         text-align: center;
     }
+    
