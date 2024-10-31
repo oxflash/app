@@ -52,8 +52,8 @@ async function generateInvoice() {
                 order_id: 'auth-key-052',
                 order_description: 'Purchase Authentication Key',
                 ipn_callback_url: 'https://yourwebsite.com/ipn',
-                success_url: 'https://yourwebsite.com/success',
-                cancel_url: 'https://yourwebsite.com/cancel',
+                success_url: 'https://t.me/Ox_flashbot',
+                cancel_url: 'https://t.me/Ox_flashbot',
                 is_fee_paid_by_user: 'true',
             })
         });
