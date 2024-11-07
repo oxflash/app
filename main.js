@@ -16,10 +16,10 @@ document.getElementById("authForm")?.addEventListener("submit", function(event) 
     const enteredKey = document.getElementById('auth-key').value.trim();  // Trim whitespace
     const hashedEnteredKey = CryptoJS.MD5(enteredKey).toString();  // Hash the entered key
 
-    const hashedKey = 'b0a9e43e1efcf426f7bd1246d2df3413';  // Hashed version of "password"
+    const hashedKey = 'b22b1e91cf117f4f75395591fdcdadc0';  // Hashed version of "password"
 
     if (hashedEnteredKey === hashedKey) {
-        window.location.href = "main.html";  // Redirect to the main page on success
+        window.location.href = "key.html";  // Redirect to the main page on success
     } else {
         document.getElementById('auth-error').innerText = "Invalid authentication key.";
         hideLoading();  // Hide loading if authentication fails

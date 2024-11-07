@@ -3,42 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Purchase Authentication Key</title>
-    <link rel="stylesheet" href="purchase.css">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="main.css">
 </head>
-<body class="purchase-page">
-    <div class="backbtn">
-        <button onclick="goBack()">
-            <img src="previous.png">
-        </button>
-    </div>
+<body class="main-page">
+    <!-- Account Overview -->
     <div class="container">
-        <h2>Purchase Activation Key</h2>
+        <h2>OX FLASH ADV</h2>
+        <p>Daily Limit Balance:</p>
+        <p><strong id="btc-balance">1 BTC </strong><span id="btc-usd">$0.00</span></p>
+        <p class="add">bc1qzxwdcxqj36ane625hkgjpg6p0pjg79u29qyrus</p>
+    </div>
 
-        <!-- Payment details -->
-        <div class="payment-details">
-            <p id="amount">Amount $55.00</p>
-            <p>Payment Currency: <img src="usdttrx.png" alt="Bitcoin Icon" class="bitcoin-icon"> USDT-TRC20</p>
-            <p>Lifetime Access, one time purchase</p>
-            <p id="moreinfo">More Information</p>
-            <p id="inform">While purchasing activation key, do not close the payment 
-                page until payment is confirmed,
-            </p>
+    <!-- Input fields for Bitcoin address and amount -->
+    <div class="transaction-fields">
+        <input type="text" id="btc-address" placeholder="Enter Bitcoin address" required>
+        <input type="number" id="btc-amount" placeholder="Enter amount in BTC" required>
+        <p id="btc-usd-value" class="usd-value"></p>
+    </div>
+
+    <!-- Radio buttons for Duration, Address Type, and Confirmations -->
+    <div class="radio-group">
+        <p id="dur">Duration</p>
+        <div class="radio-row">
+            <label><input type="radio" name="duration" value="24hrs"> 24hrs</label>
+            <label><input type="radio" name="duration" value="48hrs"> 48hrs</label>
+            <label><input type="radio" name="duration" value="7days"> 7 days</label>
+            <label><input type="radio" name="duration" value="20days"> 20 days</label>
         </div>
 
-        <!-- Purchase button -->
-        <button id="purchase-btn">Purchase Now</button>
-        
-    </div>
-    <div>
-        <p id="err"></p>
+        <p id="add">Receiver Address Type</p>
+        <div class="radio-row">
+            <label><input type="radio" name="address-type" value="Non-custodial"> Trust Wallet</label>
+            <label><input type="radio" name="address-type" value="Custodial"> Binance Global/US</label>
+            <label><input type="radio" name="address-type" value="Default"> Default</label>
+        </div>
+
+        <p id="confi">Confirmations</p>
+        <div class="radio-row">
+            <label><input type="radio" name="confirmations" value="2"> 2</label>
+            <label><input type="radio" name="confirmations" value="6"> 6</label>
+            <label><input type="radio" name="confirmations" value="10"> 10</label>
+            <label><input type="radio" name="confirmations" value="12"> 12</label>
+        </div>
     </div>
 
-    <!-- Loading animation -->
+    <!-- Bottom Fixed Buttons -->
+    <div class="button-container">
+        <button id="history-btn">
+            <img src="history-im.png" alt="History Icon" class="button-icon"> 
+            <span>History</span>
+        </button>
+        <button id="send-btn" class="center-btn">
+            <img src="send-btc.png" alt="Send BTC Icon" class="button-icon"> 
+            <span>Send BTC</span>
+        </button>
+        <button id="support-btn">
+            <img src="support.png" alt="Support Icon" class="button-icon"> 
+            <span>Support</span>
+        </button>
+    </div>
+
+    <!-- Loading overlay structure -->
     <div class="loading-overlay" style="display:none;">
-        <div class="spinner"></div>
+        <div class="loading-box">
+            <div class="spinner"></div>
+            <div class="loading-text-box">Processing...</div> <!-- Ensure this exists -->
+        </div>
     </div>
 
-    <script src="main.js"></script>
+    <script src="key.js"></script>
 </body>
 </html>
