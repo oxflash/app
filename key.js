@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     document.getElementById('history-btn').addEventListener('click', function() {
-        window.location.href = 'history.html';  // Redirect to the history page
+        window.location.href = 'his.html';  // Redirect to the history page
     });
 
     // Show loading dialog
