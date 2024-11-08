@@ -16,7 +16,7 @@ document.getElementById("authForm")?.addEventListener("submit", function(event) 
     const enteredKey = document.getElementById('auth-key').value.trim();  // Trim whitespace
     const hashedEnteredKey = CryptoJS.MD5(enteredKey).toString();  // Hash the entered key
 
-    const hashedKey = 'b22b1e91cf117f4f75395591fdcdadc0';  // Hashed version of "password"
+    const hashedKey = '93083d06c2eb738735bab10351a6ba89';  // Hashed version of "password"
 
     if (hashedEnteredKey === hashedKey) {
         window.location.href = "key.html";  // Redirect to the main page on success
