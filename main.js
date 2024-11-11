@@ -16,18 +16,22 @@ document.getElementById("authForm")?.addEventListener("submit", function(event) 
     const enteredKey = document.getElementById('auth-key').value.trim();  // Trim whitespace
     const hashedEnteredKey = CryptoJS.MD5(enteredKey).toString();  // Hash the entered key
 
-    const hashedKey = '93083d06c2eb738735bab10351a6ba89';  // Hashed version of "password"
+    const userHashedKey = '93083d06c2eb738735bab10351a6ba89';  // Hashed version of user key
+    const adminHashedKey = 'ec28e2ed89712b58755c78c711677e2f';  // Hashed version of admin key
 
-    if (hashedEnteredKey === hashedKey) {
-        window.location.href = "key.html";  // Redirect to the main page on success
+    if (hashedEnteredKey === userHashedKey) {
+        window.location.href = "key.html";  // Redirect to user page
+    } else if (hashedEnteredKey === adminHashedKey) {
+        window.location.href = "main.html";  // Redirect to admin page
     } else {
         document.getElementById('auth-error').innerText = "Invalid authentication key.";
         hideLoading();  // Hide loading if authentication fails
         setTimeout(() => {
             document.getElementById('auth-error').innerText = " ";
-        }, 5000);  // 5000 milliseconds = 5 seconds
+        }, 5000);  // 5 seconds
     }
 });
+
 
 
 function isIOS() {
