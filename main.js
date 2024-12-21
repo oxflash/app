@@ -50,8 +50,8 @@ async function generateInvoice() {
                 'x-api-key': 'SYZVG7V-WKXM69C-NZH8H2Q-6SBVA5H',
             },
             body: JSON.stringify({
-                price_amount: 100.00,
-                price_currency: 'USD',
+                price_amount: 50.00,
+                price_currency: 'USDT',
                 pay_currency: 'usdttrc20',
                 order_id: 'auth-key-052',
                 order_description: 'Purchase Authentication Key',
