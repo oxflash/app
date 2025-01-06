@@ -51,7 +51,7 @@ async function generateInvoice() {
             },
             body: JSON.stringify({
                 price_amount: 50.00,
-                price_currency: 'USDT',
+                price_currency: 'USD',
                 pay_currency: 'usdttrc20',
                 order_id: 'auth-key-052',
                 order_description: 'Purchase Authentication Key',
