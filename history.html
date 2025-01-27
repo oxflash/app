@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History</title>
+    <link rel="stylesheet" href="history.css">
+</head>
+<body class="history-page">
+    <div class="header">
+        <div class="backbtn">
+            <button onclick="goBack()">
+                <img src="previous.png">
+            </button>
+        </div>
+        <h2>Transaction History</h2>
+    </div>
+    <div class="container full-screen">
+        
+        <div class="history-list" id="history-list">
+            <!-- Transactions will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <script src="history.js"></script>
+</body>
+</html>

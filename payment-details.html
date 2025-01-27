@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Details</title>
+    <link rel="stylesheet" href="payment-details.css">
+</head>
+<body class="payment-page">
+    <div class="container">
+        <h2>Complete Your Payment</h2>
+        <div id="payment-info">
+            <p>Generating payment details...</p>
+        </div>
+        <div id="qr-code"></div>
+        <button onclick="goBack()" class="backbtn">Back</button>
+    </div>
+
+    <div class="loading-overlay" style="display:none;">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="payment-details.js"></script>
+</body>
+</html>

@@ -1,0 +1,300 @@
+/* ========== MAIN PAGE STYLING ========== */
+/* Main Page Styling */
+.main-page{
+    background-color: #ffffff;
+    overflow: auto;
+    flex: 1;
+    
+    }
+    
+    .container {
+        background-image: s;
+        text-align:left;
+        text-wrap: 10px;
+        padding: 10px;
+        width: auto;
+        margin: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.342);
+    }
+    .container strong{
+        margin-bottom: 0px;
+        font-size: 30px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        color: rgb(77, 56, 18);
+        line-height: 0;
+    }
+    .add{
+        font-size: 10px;
+        color: rgb(199, 167, 109);
+        justify-content: left;
+        line-height: 0;
+    }
+    .container h2{
+        text-align: center;
+        color: rgb(211, 171, 96);
+    }
+    
+    .container span {
+        font-size:12px;
+        margin-top: 0px;
+    }
+    
+    /* Input styling for address and amount */
+    .transaction-fields {
+        margin: 10px 30px;
+        text-align: center;
+    }
+    
+    input[type="text"], input[type="number"] {
+        width: 90%;
+        padding: 10px;
+        margin: 10px 0;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid #aa966a;
+        border-radius: 5px;
+        font-size: 16px;
+        outline: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.726);
+    }
+    
+    /* Remove the spinner for number input */
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    
+    input[type="number"] {
+        -moz-appearance: textfield;
+    }
+    
+    /* USD value below input */
+    .usd-value {
+        text-align: left;
+        margin-left: 5%;
+        font-size: 14px;
+        color: #666;
+    }
+    
+    /* Radio Buttons Styling */
+    .radio-group {
+        margin: 20px;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .radio-row {
+        display: contents;
+        justify-content: space-around;
+        margin: 20px 0px;
+        color: rgb(0, 0, 0);
+        box-shadow: 0 4px 8px rgba(202, 202, 202, 0.815);
+        background-color: #110f0f;
+    }
+    
+    .radio-row label {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        line-height: 1;
+    }
+    
+    .radio-group p {
+        color: rgb(187, 122, 36);
+        line-height: 0%;
+        font-weight: bold;
+    }
+    
+    /* Custom Radio Button Dot Color (Orange) */
+    input[type="radio"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 16px;
+        height: 16px;
+        border: 2px solid rgb(24, 24, 23);
+        border-radius: 50%;
+        outline: none;
+        cursor: pointer;
+        position: relative;
+    }
+    
+    input[type="radio"]:checked::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 10px;
+        height: 10px;
+        background-color: rgb(255, 178, 63);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    /* Bottom Fixed Buttons */
+    .button-container {
+        margin-top: 50px;
+        position: sticky;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-around;
+        background-color: #ffffff23;
+        padding: 10px;
+        box-shadow: 0 -2px 5px rgb(255, 252, 252);
+    }
+    
+    .button-container button {
+        align-items: center;
+      appearance: none;
+      background-color: #ffffff46;
+      border-radius: 24px;
+      border-style: none;
+      box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+      box-sizing: inherit;
+      color: #000000;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      fill: currentcolor;
+      font-family: "Google Sans",Roboto,Arial,sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      height: 48px;
+      justify-content: center;
+      line-height: normal;
+      max-width: 100%;
+      overflow: visible;
+      padding: 2px 24px;
+      position: relative;
+      text-align: center;
+      text-transform: none;
+      transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      width: auto;
+      will-change: transform,opacity;
+      z-index: 0;
+      margin: 0 5px;
+    }
+    
+    .button-container button:hover {
+        background: #ffda6231;
+        color: hsl(0, 0%, 0%);
+    }  
+    .button-container button:active{
+        box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+      outline: none;
+    }
+    
+    /* Center the Send BTC button */
+    
+    
+    /* Button Icons */
+    .button-icon {
+        width: 20px;
+        height: 20px;
+        margin-bottom: 5px; /* Add space between icon and text */
+    }
+    
+    /* Loading overlay styling */
+    .loading-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);  /* Dark background with opacity */
+        display: none;  /* Initially hidden */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;  /* Ensure it appears above all other elements */
+    }
+    
+    /* Box for loading spinner and text */
+    .loading-box {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        border: 2px solid rgb(255, 255, 255);
+        text-align: center;
+        width: 320px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Loading spinner */
+    .spinner {
+        border: 10px solid #f3f3f3;
+        border-top: 10px solid rgb(97, 80, 49);
+        border-radius: 50%;
+        width: 50px;  /* Reduced the size to make space for text */
+        height: 50px;  /* Reduced height */
+        animation: spin 2s linear infinite;
+        margin-bottom: 20px; /* Add space between spinner and text */
+    }
+    
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    
+    /* Text box for changing transaction status */
+    .loading-text-box {
+        background-color: #ffffff;  /* Light orange background */
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid rgb(255, 255, 255);
+        
+        text-align: center;
+        font-size: 16px;
+        color: #000000;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.199);
+    }
+    
+    /* Success dialog box */
+    .success-box {
+        align-items: center;
+        width: 60%;
+        word-wrap: break-word;
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 20px;
+        border: 3px solid rgb(255, 255, 255);
+        border-radius: 10px;
+        z-index: 10000;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        font-size: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Success icon styling */
+    .success-icon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+    }
+    .success-box strong{
+        color: rgb(190, 156, 92);
+    }

@@ -1,0 +1,166 @@
+/* ========== PURCHASE PAGE STYLING ========== */
+.purchase-page {
+    background-color: #f9f9f9;
+}
+
+.container {
+    text-align: center;
+    margin-top: 100px;
+    padding: 20px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.purchase-page h2 {
+    color: #6e4a1a;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.purchase-page .payment-details p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #555;
+}
+
+.purchase-page .bitcoin-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* Purchase button styling */
+#purchase-btn {
+    display: inline-block;
+    background-color: rgb(180, 133, 47);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px, rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+    width: 100%; /* Full width for responsiveness */
+    max-width: 300px; /* Limit the button width */
+    margin: 20px auto 0; /* Center the button */
+}
+
+#purchase-btn:hover {
+    background-color: rgb(231, 168, 91);
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.3) 0 4px 6px -1px, rgba(0, 0, 0, 0.2) 0 8px 12px 0, rgba(0, 0, 0, 0.15) 0 2px 24px 0;
+}
+
+#purchase-btn:active {
+    transform: scale(0.98);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 3px 5px -1px, rgba(0, 0, 0, 0.06) 0 6px 10px 0;
+}
+
+
+.email-input {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.email-input label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #6e4a1a;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.email-input input {
+    width: 90%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    outline: none;
+    font-family: Arial, sans-serif;
+}
+
+.email-input input:focus {
+    border-color: #b38a54;
+    box-shadow: 0 0 8px rgba(179, 138, 84, 0.6);
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.spinner {
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid rgb(172, 128, 48);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+p#err {
+    color: red;
+    text-align: center;
+}
+
+.backbtn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.backbtn button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px, rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+    padding: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 40px; /* Adjust button width */
+    height: 40px; /* Adjust button height */
+}
+
+.backbtn button:hover {
+    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.2) 0 4px 6px -1px, rgba(0, 0, 0, 0.14) 0 8px 12px 0, rgba(0, 0, 0, 0.12) 0 2px 24px 0;
+}
+
+.backbtn img {
+    width: 20px; /* Resize the image width */
+    height: 20px; /* Resize the image height */
+}

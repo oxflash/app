@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Authentication Key</title>
+    <link rel="stylesheet" href="purchase.css">
+</head>
+<body class="purchase-page">
+    <div class="backbtn">
+        <button onclick="goBack()">
+            <img src="previous.png">
+        </button>
+    </div>
+    <div class="container">
+        <h2>Purchase Activation Key</h2>
+
+        <!-- Payment details -->
+        <div class="payment-details">
+            <p id="amount">Amount $50.00</p>
+            <p>Payment Currency: <img src="usdttrx.png" alt="USDT Icon" class="bitcoin-icon"> USDT-TRC20</p>
+            <p>Lifetime Access, one-time purchase</p>
+            <p id="moreinfo">More Information</p>
+            <p id="inform">While purchasing the activation key, do not close the payment page until payment is confirmed.</p>
+        </div>
+
+        <!-- Email input for activation key -->
+        <div class="email-input">
+            <label for="email">Enter your email to receive the activation key:</label>
+            <input type="email" id="email" placeholder="your-email@example.com" required>
+        </div>
+
+        <!-- Purchase button -->
+        <button id="purchase-btn">Purchase Now</button>
+    </div>
+    <div>
+        <p id="err"></p>
+    </div>
+
+    <!-- Loading animation -->
+    <div class="loading-overlay" style="display:none;">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

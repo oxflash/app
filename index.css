@@ -1,0 +1,167 @@
+/* ========== INDEX PAGE STYLING (Authentication Page) ========== */
+.index-page{
+    background-color: #ffffff;
+    }
+
+
+    .container  {
+        text-align: center;
+        margin-top: 100px;
+        padding: 20px;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.418);
+        justify-content: center;
+    
+    }
+
+    .head  {
+        color: #000000;
+        font-family: Arial, sans-serif;
+        font-size: large;
+        margin-bottom: 1px;
+        font-weight: bold;
+    }
+
+    .index-page input[type="password"] {
+        width: 90%;
+        padding: 12px;
+        margin: 10px 0;
+        display: inline-block;
+        border: 1px solid #cfcfcf;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 16px;
+        box-shadow: 0 4px 8px rgba(97, 97, 97, 0.1);
+        outline: none;
+    }
+
+    .container button {
+            align-items: center;
+        appearance: none;
+        background-color: #ffffffef;
+        border-radius: 20px;
+        border-style: none;
+        box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+        box-sizing: inherit;
+        color: #000000;
+        cursor: pointer;
+        fill: currentcolor;
+        font-family: "Google Sans",Roboto,Arial,sans-serif;
+        font-size: 13px;
+        font-weight: bold;
+        height: 48px;
+        justify-content: center;
+        line-height: normal;
+        max-width: 100%;
+        overflow: visible;
+        padding: 2px 24px;
+        position: relative;
+        text-align: center;
+        text-transform: none;
+        transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: auto;
+        will-change: transform,opacity;
+        z-index: 0;
+        margin: 0 5px;
+    }
+
+    .container button:hover{
+        background-color: rgb(196, 151, 97);
+        color: rgb(255, 255, 255);
+    }
+
+    .container .error-message {
+        color: red;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .logimage{
+        width: 50px;
+        height: 50px;
+    }
+
+    .index-page h2 {
+        color: rgb(82, 69, 44);
+        text-align: center;
+    }
+        /* Loading overlay styling */
+    .loading-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);  /* Dark background with opacity */
+        display: none;  /* Initially hidden */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;  /* Ensure it appears above all other elements */
+    }
+
+        /* Box for loading spinner and text */
+    .loading-box {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        border: 2px solid rgb(255, 255, 255);
+        text-align: center;
+        width: 320px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Loading spinner */
+    .spinner {
+        border: 10px solid #f3f3f3;
+        border-top: 10px solid orange;
+        border-radius: 50%;
+        width: 50px;  /* Reduced the size to make space for text */
+        height: 50px;  /* Reduced height */
+        animation: spin 2s linear infinite;
+        margin-bottom: 20px; /* Add space between spinner and text */
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    /* Text box for changing transaction status */
+    .loading-text-box {
+        background-color: #ffffff;  /* Light orange background */
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid rgb(255, 255, 255);
+        
+        text-align: center;
+        font-size: 16px;
+        color: #000000;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.199);
+    }
+    p#support-btn{
+        color: rgb(71, 60, 42);
+        font-weight: 800;
+    }
+    .email-icon{
+        width: 20px; 
+        height: 20px;
+    }
+    p#clipmsg{
+        color: #c99a02;
+    }
+    p#learn{
+        font-size: 13px;
+        color: #8b7c48;
+    }

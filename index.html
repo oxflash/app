@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication Page</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- Include CryptoJS from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+</head>
+<body class="index-page">
+    <h2>OX FLASH ADV</h2>
+    <div class="container">
+        <img src="logo.png" class="logimage">
+        <p class="head">ACTIVATION</p>
+        <!-- Authentication Form -->
+        <form id="authForm">
+            <input type="password" id="auth-key" placeholder="Enter activation key" required>
+            <button type="submit">Activate</button>
+            <p id="auth-error" class="error-message"></p>
+        </form>
+
+        <!-- Button for purchasing authentication key -->
+        <button id="purchase-button" onclick="window.location.href='purchase.html'">Purchase Activation Key</button>
+        <p id="support-btn" onclick="copyEmail()">
+            <img src="email.png" class="email-icon"> Email Us
+        </p> 
+        <p id="clipmsg"></p>
+        <p id="learn" onclick="window.location.href='information.html'">Learn More</p>
+    </div>
+
+    <!-- Loading overlay -->
+    <div class="loading-overlay" style="display:none;">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Main JavaScript for authentication -->
+    <script src="main.js"></script>
+</body>
+</html>
