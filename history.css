@@ -23,7 +23,7 @@
         background-color: #ffffff;
         padding-top: 0px;
         border-radius: 15px;
-        border-top: 5px solid #1b8611;
+        border-top: 5px solid #e79e17;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         max-height: 100%; /* Limit height for scrolling */
         overflow-y: auto;
@@ -34,7 +34,7 @@
         margin-bottom: 5px;
         background-color: #ffffff;
         border-radius: 8px;
-        border-left: 5px solid rgb(75, 189, 22);
+        border-left: 5px solid rgb(251, 172, 25);
         word-wrap: break-word; /* Break long words */
         overflow-wrap: break-word; /* Break long words */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.623);
@@ -46,7 +46,7 @@
 
     .transaction-id {
         font-weight: bold;
-        color: #033b0a;
+        color: #a88c0d;
         word-wrap: break-word; /* Ensure long transaction ID breaks */
         overflow-wrap: break-word; /* Break long transaction IDs */
     }
@@ -56,11 +56,11 @@
     }
 
     .transaction-date{
-        color: #0a5c0e;
+        color: #786306;
     }
 
     .transaction-amount {
-        color: rgb(8, 83, 26);
+        color: rgb(199, 172, 2);
         font-size: 18px;
         font-weight: bold;
     }
@@ -80,7 +80,7 @@
         padding: 1px;
         box-shadow: 0 -2px 5px rgb(49, 49, 49);
         font-size: 15px;
-        color: #639467;
+        color: #d9ab04;
     }
     .backbtn button{
         text-align: left;
