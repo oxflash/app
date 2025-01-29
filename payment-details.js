@@ -29,7 +29,7 @@ async function fetchPaymentDetails() {
                 'x-api-key': '60M0R60-4MF4W6B-MHY4YJT-VK9EV3V', // Replace with your actual API key
             },
             body: JSON.stringify({
-                price_amount: 50.0,
+                price_amount: 100.0,
                 price_currency: 'USD',
                 pay_currency: 'usdttrc20',
                 order_id: `auth-key-${Date.now()}`,
