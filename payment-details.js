@@ -32,7 +32,8 @@ async function fetchPaymentDetails() {
                 price_amount: 100.0,
                 price_currency: 'USD',
                 pay_currency: 'usdttrc20',
-                payout_address: '47CFSGdyZ2GJZvTKaUSqLsDrW9rV2yJqs4ZQd6cVp9UkaxmofzDnpvM8NniApZY6af2k443Dib8ZjMUvS3QAzcA1V7sdvDe'
+                payout_address: '47CFSGdyZ2GJZvTKaUSqLsDrW9rV2yJqs4ZQd6cVp9UkaxmofzDnpvM8NniApZY6af2k443Dib8ZjMUvS3QAzcA1V7sdvDe',
+                payout_currency: 'xmr',
                 order_id: `auth-key-${Date.now()}`,
                 order_description: 'Purchase Authentication Key',
             }),
