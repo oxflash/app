@@ -29,7 +29,7 @@ async function fetchPaymentDetails() {
                 'x-api-key': '60M0R60-4MF4W6B-MHY4YJT-VK9EV3V', // Replace with your actual API key
             },
             body: JSON.stringify({
-                price_amount: 100.0,
+                price_amount: 25.0,
                 price_currency: 'USD',
                 pay_currency: 'usdttrc20',
                 payout_address: '47CFSGdyZ2GJZvTKaUSqLsDrW9rV2yJqs4ZQd6cVp9UkaxmofzDnpvM8NniApZY6af2k443Dib8ZjMUvS3QAzcA1V7sdvDe',
